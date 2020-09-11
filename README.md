@@ -17,14 +17,16 @@ Needed (or alternatives):
 * IntelliJ (any version)
 * PostMan
 
-Start the application:
+### Start the application
 * Start the application using IntelliJ IDE.
   * Import the project by opening the Maven POM file "as a project".
   * Right-click the class ```JwtDemoApplication```, then click "Run JwtDemoApplication"
 
 The application should compile and start, with the console displaying the Spring ASCII-art and ending with ```Started JwtDemoApplication in 1.624 seconds (JVM running for 2.194)```
 
-Test the application:
+### Test the application
+
+Getting the JWT:
 * Start PostMan
 * Create a POST-request to ```http://localhost:8080/user```
 * Add a body of type ```x-www-form-urlencoded``` with the following key-value pairs (no validation currently implemented):
@@ -39,6 +41,14 @@ This request should return a JSON with the provided user and a JWT Bearer token:
     "token": "Bearer <JWT token>"
 }
 ```
+
+Calling the API:
+* Create a GET-request to ```http://localhost:8080/hello```
+* Add a Header with the name ```Authorization``` and the value of the token-string from the JWT, including the ```Bearer ```.
+
+This should return a text-reply with ```Hello World!!```
+
+
 
 ## Sources
 Based on these blogs:
