@@ -10,7 +10,7 @@
     </parent>
     <groupId>nl.patelski.spring.jwt.demo</groupId>
     <artifactId>jwt-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>jwt-demo</name>
     <description>Demo for JWT authentication on a dummy API using Spring Boot Starter Security</description>
 
